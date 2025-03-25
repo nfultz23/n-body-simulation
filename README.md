@@ -1,0 +1,1 @@
+This simulation creates a large amount of particles and simulates their interactions over time. Each particle type has a unique attraction value to each other, which informs the way that they move in the environment.
