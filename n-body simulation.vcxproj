@@ -136,7 +136,9 @@
   <ItemGroup>
     <ClInclude Include="entity.h" />
     <ClInclude Include="environment.h" />
+    <ClInclude Include="Quadtree.h" />
     <ClInclude Include="stb_image.h" />
+    <ClInclude Include="tests.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -111,6 +111,7 @@ void updateParticles() {
 			double angle = atan2(dy, dx);
 
 			double force =
+				10 *
 				particlelist[i].mass *
 				particlelist[j].mass *
 				charges[particlelist[i].type][particlelist[j].type] /
@@ -121,6 +122,13 @@ void updateParticles() {
 
 			xchange += force * cos(angle);
 			ychange += force * sin(angle);
+
+			/*
+			printf("Force on particle (%d, %d) by particle (%d, %d) is %f\n",
+				particlelist[i].xpos, particlelist[i].ypos,
+				particlelist[j].xpos, particlelist[j].ypos,
+				force);
+			//*/
 		}
 
 		particlelist[i].xacc += xchange;
