@@ -5,6 +5,7 @@
 #include <SDL.h>
 #include <cstdlib>
 #include <algorithm>
+
 #include "./entity.h"
 #include "./environment.h"
 
@@ -19,8 +20,9 @@ double charges[5][5] = {
 using std::min;
 using std::max;
 
-class particle {
-public:
+//class particle {
+//public:
+	/*
 	int xpos;
 	int ypos;
 	int radius;
@@ -32,8 +34,9 @@ public:
 	double xacc; double yacc;
 
 	int r; int g; int b;
+	*/
 
-	particle(int x, int y, int r, int type) {
+	particle::particle(int x, int y, int r, int type) {
 		this->xpos = x;
 		this->ypos = y;
 
@@ -67,7 +70,7 @@ public:
 		else { this->r = 0x00; this->g = 0x00; this->b = 0xFF; }
 	}
 
-	void move() {
+	void particle::move() {
 		this->xvel += this->xacc;
 		this->yvel += this->yacc;
 
@@ -83,7 +86,7 @@ public:
 		this->xacc = 0;
 		this->yacc = 0;
 	}
-};
+//};
 
 std::vector<particle> particlelist;
 

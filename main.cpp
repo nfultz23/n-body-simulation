@@ -91,6 +91,7 @@ int main(int argc, char** argv) {
 int testFeatures() {
 	std::vector<std::string> testables;
 	testables.push_back("Tile Class");
+	testables.push_back("Quadtree node Class");
 
 	printf("\nPlease input the item to test from the list below:\n");
 	for (int x = 0; x < testables.size(); x++)
@@ -108,6 +109,7 @@ int testFeatures() {
 
 	int res = 0;
 	if (item == 0) res = testTileClass();
+	if (item == 1) res = testQuadNode();
 
 	std::cout << std::endl;
 	std::cout << "Test again? (y/n) ?> ";
